@@ -1,0 +1,741 @@
+
+body{
+    background-color: white;
+    margin: 0;
+}
+
+/* columns */ 
+    .columns {
+        padding-left: 2%;
+        padding-right: 2%;
+        width: 96%;
+        height: fit-content;
+        float: left;
+    }
+
+    .col {
+        width: 100%;
+        height: fit-content;
+        float: left;
+    }
+
+    .col-50 {
+        width: 50%;
+        height: fit-content;
+        float: left;
+    }
+
+    .col-25 {
+        width: 25%;
+        height: fit-content;
+        float: left;
+      }
+
+/* Text Styles*/   
+body {
+    font-family: sans-serif;
+    font-size: 11pt;
+}
+
+p{
+   margin: 0;
+}
+
+h3{
+    font-weight: normal;
+}
+
+.textBigger{
+    color: rgb(40, 40, 40);
+    font-size: 14pt;
+}
+
+.textGrey{
+    color: rgb(168, 168, 168);
+}
+
+.textGrey a{
+    color: #a8a8a8;
+    text-decoration: none;
+}
+
+.textGrey a:hover{
+    color: #282828;
+
+    transition:all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+  }
+
+.textBold{
+    font-weight: bold;
+}
+
+.textSmall{
+    color: rgb(40, 40, 40);
+}
+
+.textItalic{
+    font-style: italic;
+}
+
+.projLinks {
+    font-size: 11pt;
+    color: rgb(168, 168, 168);
+}
+
+.projLinks .caption {
+    font-size: 10pt;
+    line-height: 0.5;
+}
+
+.projLinks a{
+    text-decoration: none;
+}
+
+.projLinks a:hover{
+    color: rgb(40, 40, 40);
+}
+
+/* header Styles */ 
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .WebMenu{
+        background-color: white;
+        width: 100%;
+        float: left;
+    } 
+
+    .header-top{
+        padding-bottom: 3%;
+        height: fit-content;
+        float: left;
+        width: 100%;
+        background-color: white;
+    }
+
+    .header-bottom{
+        padding-top: 1%;
+        padding-bottom: 1.5%;
+        height: fit-content;
+        float: left;
+        width: 100%;
+    }  
+
+    
+
+/* header Name Banner */ 
+    #MyBanner {   
+        height: 8vw;   
+        border-bottom: 1px solid #e1e1e1;
+        float: left;
+        overflow: hidden;
+
+        transition:all 1s ease-in-out;
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+    }
+
+    #MyBanner.small {
+        height: 3vw;
+    }
+
+    #MyName,
+    #MySurname {
+        font-size: 9.9vw;
+        
+        transition:all 1s ease-out;
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+    }
+
+    #MyName.small {
+        font-size: 5vw;
+    }
+    #MySurname.small {
+        font-size: 5vw;
+    }
+
+/* Menu Banner */   
+    #MyMenu {   
+        top:40px;
+        float: left;
+
+        transition:all 1.5s ease-out;
+        -webkit-transition: all 1.5s ease-out;
+        -moz-transition: all 1.5s ease-out;
+    }
+
+    #MyMenu.small {
+        margin-top:-20%;
+    }
+
+/* Name Banner text styles */  
+    #dash{
+        width: fit-content;
+        float: right;
+    }
+
+    .wrapper {
+        position: relative;
+        display: inline-block;
+    }   
+    
+    .default,
+    .title {
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-family: 'Cousine', monospace;
+    }
+
+    .title {
+        overflow: hidden;
+        width: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: rgb(40, 40, 40);
+        white-space: nowrap;
+    }
+
+    .default::first-letter {
+        color: rgb(40, 40, 40);
+    }
+    
+/* Name Banner animation on hover*/  
+    .headtitle:hover #name {
+        width: 100%;
+        animation: staggerIn .3s steps(7);
+        -webkit-animation:staggerIn .3s steps(7);;
+        -moz-animation: staggerIn .3s steps(7);; 
+    }
+    
+    .headtitle #name {
+        animation: staggerOut .2s steps(7);
+        -webkit-animation:staggerOut .2s steps(7);
+        -moz-animation: staggerOut .2s steps(7);
+        }
+    
+    .headtitle:hover #surname {
+        width: 100%;
+        animation: staggerIn .3s steps(8);
+        -webkit-animation:staggerIn .3s steps(8);
+        -moz-animation: staggerIn .3s steps(8);
+        }
+    
+    .headtitle #surname {
+        animation: staggerOut .2s steps(8);
+        -webkit-animation:staggerOut .2s steps(8);
+        -moz-animation: staggerOut .2s steps(8);
+        }
+
+    @keyframes staggerIn  {
+        from {width: 0;}
+        to {width: 100%;}
+    }
+    
+    @keyframes staggerOut  {
+        from {width: 100%;}
+        to {width: 0;}
+    }
+
+/* Mobile Menu full page*/
+    .MobileMenu{
+        position: absolute;
+        display: none;
+        z-index: -100;
+        width: 100%;
+        height: 90px;
+        text-align: right;
+        background-color: rgba(230, 230, 230, 0.7); 
+        border-radius: 10px;
+    }
+    #MyMobileMenu.small{
+        top:-30vh; 
+    }
+
+    nav{
+        width: 100%;
+        left: 0vh;
+        top: -300px;
+        padding-top: 20%;
+        padding-bottom: 1%;
+        background-color: red;
+        
+        transition:all 1.5s ease-out;
+        -webkit-transition: all 1.5s ease-out;
+        -moz-transition: all 1.5s ease-out;
+    }
+
+    .nav-open {
+        top: 5px;
+
+        transition:all 1.5s ease-out;
+        -webkit-transition: all 1.5s ease-out;
+        -moz-transition: all 1.5s ease-out;
+    }
+
+    nav a {
+        display: block;
+        margin-right: 2%;
+        margin-left: 2%;
+        padding-top: 15px;
+        padding-bottom: 2%;
+        font-size: 14px;
+        text-decoration: none;
+        cursor: pointer;
+        color: rgb(168, 168, 168);
+        border-top: 1px solid #d3d3d3;
+    }
+
+    nav a:hover {
+        color: rgb(40, 40, 40);
+    }
+
+/* Mobile Menu Icon*/
+    .MenuIcon{
+        display: none;
+        float: right;
+    } 
+
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgba(230, 230, 230, 0.7); 
+        padding: 10px;
+        height: 15px;
+        width: 15px;
+        border-radius: 30px;
+    }
+
+    .nav-toggle .bar {
+        height: 1px;
+        width: 100%;
+        background-color: rgb(40, 40, 40);
+        transition: all 100ms ease-in-out;
+    }
+
+    .nav-toggle:hover {
+        cursor: pointer;
+    }
+
+    .x:nth-of-type(1) {
+        transition: all 100ms ease-in-out;
+        transform: rotate(45deg);
+        transform-origin: top left;
+        width: 20px;
+    }
+
+    .x:nth-of-type(2) {
+        transition: all 100ms ease-in-out;
+        transform-origin: center;
+        width: 0;
+    }
+
+    .x:nth-of-type(3) {
+        transition: all 100ms ease-in-out;
+        transform: rotate(-45deg);
+        transform-origin: bottom left;
+        width: 20px;
+    }
+
+
+/* Header responsiveness*/
+    @media only screen and (max-width: 1200px) {
+        .col-25 {
+          width: 50%;
+        }
+        #Blank,
+        .visitorInfo{
+            display: none;
+          }
+        
+      }
+
+      @media only screen and (max-width: 576px) {
+        .col-25 {
+          width: 50%;
+        }
+        .MobileMenu {
+            float: left;
+            display: block;
+        }
+        .MenuIcon{
+            display: block;
+        }
+        #MyLinks {
+        display: none;
+        } 
+
+        #MyName.small,
+        #MySurname.small {
+            font-size: 7vw;
+        }
+        #MyBanner.small {
+            height: 5.5vw;
+        }
+      }
+    
+/* Projects Page */  
+    main{
+        margin-top: 30%;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: -10;
+    }
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        column-gap: 1%;
+        row-gap: 40px;
+    }
+
+    .projects a {
+        border-top: 1px solid #e1e1e1;
+        text-decoration: none;
+    }
+
+    .projects .top {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .projects img {
+        width: 100%;
+    }
+    
+/* projects images hover */  
+    .projects .container {
+        position: relative;
+        height: 25vw;
+        overflow: hidden;
+        }
+
+    .projects .image {
+        display: block;
+        height: auto;
+        width: 100%;
+        }
+        
+        .container:hover .image {
+        -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        .container .image {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+
+/* Project responsiveness*/
+    @media only screen and (max-width: 1200px) {
+        .projects {
+            grid-template-columns: repeat(2,1fr);
+        }
+        .projects .container {
+            height: 50vw;
+        }
+       .main {
+            margin-top: 40%;
+        }
+  }
+
+    @media only screen and (max-width: 576px) {
+        .main {
+            margin-top: 50%;
+        }
+
+        .projects {
+            grid-template-columns: repeat(1,1fr);
+        }
+        .projects .container {
+            height: 90vw;
+        }
+  }
+
+ /* CV page*/
+ .infoBanner {
+    margin-bottom: 15px;
+    height: inherit;
+    width: 100%;
+    float: left;
+}
+
+ .section {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 20px;
+    height: inherit;
+    width: 100%;
+    float: left;
+}
+#myPresentation {
+    font-size: 30px;
+    text-indent: 25%;
+    line-height: 1.25;
+
+    border-top: 1px solid #e1e1e1;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.MyExperience p,
+.MyEducation p{
+    margin-bottom: 15px;
+}
+
+    #MyImage .frame {
+    background-color: #e6e6e6b3; 
+    padding: 10%;
+    border-radius: 10px;
+    margin-top: 300px;
+    }
+
+    #MyImage .container {
+    position: relative;
+    overflow: hidden;
+    height: 20vw;
+    }
+
+    #MyImage .image {
+    width: 100%;
+    }
+
+    #MyImage .container .image:hover {
+        transform: none;
+    }
+
+ /* marquee banner*/
+    .marquee {
+        height: 4.3vw;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .marquee div {
+        display: block;
+        width: 200%;
+        position: absolute;
+        overflow: hidden;
+        animation: marquee 10s linear infinite;
+      }
+      
+      .marquee span a{
+        float: left;
+        width: 12.5%;
+        font-size: 4.3vw;
+        text-decoration: none;
+        color: rgb(40, 40, 40);
+      }
+      
+      .marquee span a:hover{
+          color: rgb(168, 168, 168);
+      }
+      
+      @keyframes marquee {
+        0% { right: 0; }
+        100% { right: -100%; }
+      }
+
+/* CV responsiveness*/
+@media only screen and (max-width: 1200px) {
+#myPresentation {
+    text-indent: 50%;
+}
+.col-50#MyInfo{
+    width: 100%;
+}
+#MyImage .frame {
+margin-top: 0px;
+}
+#MyImage {
+width: 100%;
+}
+#MyImage .container {
+height: 40vw;
+}
+}
+
+@media only screen and (max-width: 576px) {
+.infoBanner .col-25 {
+    width: 100%;
+    padding-top: 15px;
+}
+#myPresentation {
+    text-indent: 25%;
+    font-size: 22px;
+}
+.col-50#MySkills {
+    width: 100%;
+}
+#Blank-2{
+    display: none;
+}
+.textBigger{
+    font-size: 11pt;
+}
+}
+
+/* project Page Styles*/  
+.col.projectBanner{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.projectText{
+    text-indent: 25%;
+    font-size: 14pt;
+}
+.projImm{
+    width: 100%;
+    margin: 0px;
+    display: block;
+}
+iframe.projImm{
+    height: 54vw;
+}
+.projLogo{
+    width: 95%;
+    margin: 0px;
+    display: block;
+}
+
+/* Project Page responsiveness*/
+@media only screen and (max-width: 1200px) {
+.col-50#ProjectLinks{
+    width: 100%;
+    margin-top: 20px;
+}
+}
+
+@media only screen and (max-width: 576px) {
+.col-50#ProjectTitle{
+    
+    margin: 0px;
+    display: block;
+}
+
+.col-50#ProjectDesc,
+.col-50#Project{
+        width: 100%;
+    }
+
+.col-50#ProjectDesc {
+        margin-top: 20px;
+    }
+}
+
+
+  /* next and previous projext buttons */  
+  .previous{
+    float: left;
+}
+
+.next{
+    float: right;
+}
+
+.next,
+.previous{
+    border: 1px solid #e1e1e1;
+}
+
+.next:hover,
+.previous:hover{
+    background-color: rgba(230, 230, 230, 0.7);
+}
+
+.projLinks a{
+    font-size: 14px;
+    color: rgb(168, 168, 168);
+    text-decoration: none;
+}
+
+.projLinks a:hover{
+    color: rgb(40, 40, 40);
+}
+
+.projLinks {
+    float: left;
+    width: 100%;
+}
+
+.projLinks .round {
+    padding: 10px 12px 10px 12px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+/* swich color on scroll*/  
+.changeColor,
+.changeColor2,
+.changeColor2.projLinks a,
+.changeColorLogo{
+    transition:all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+}
+
+.changeColor2.projLinks a:hover{
+    transition:all 0.0s ease-in-out;
+    -webkit-transition: all 0.0s ease-in-out;
+    -moz-transition: all 0.0s ease-in-out;
+}
+
+.color,
+.color2,
+.color2.projLinks a,
+.ColorLogo{
+    transition:all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+  footer{
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    
+}
+
+footer .col{
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    border-top: 1px solid #e1e1e1;
+}
